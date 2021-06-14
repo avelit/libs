@@ -20,6 +20,7 @@ const areaTests = _ => {
   equal(area(Number.MAX_VALUE), Infinity, 'MAX_VALUE')
   equal(area('radius'), null, 'string not number')
   equal(area(f => f), null, 'function')
+  equal(area({1: 1}), null, 'object')
 }
 
 if (window.performance) {
@@ -41,6 +42,7 @@ const startsWithCapitalsAZTests = _ => {
   equal(startsWithCapitalsAZ('Фф'), false, 'russian capital symbol Фф')
   equal(startsWithCapitalsAZ(null), false, 'null')
   equal(startsWithCapitalsAZ(f => f), false, 'function')
+  equal(startsWithCapitalsAZ({W:'W'}), false, 'object')
 }
 
 if (window.performance) {
