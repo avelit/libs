@@ -1,4 +1,4 @@
-let area = r => typeof +r === 'number' && +r >= 0 ? Math.PI * Math.pow(r, 2) : null
+let area = r => +r >= 0 ? Math.PI * Math.pow(r, 2) : null
 
 let startsWithCapitalsAZ = s => /^[A-Z].*/.test(s)
 
